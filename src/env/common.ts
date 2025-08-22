@@ -80,6 +80,24 @@ export const BITDRIFT_API_KEY: string | undefined =
   process.env.EXPO_PUBLIC_BITDRIFT_API_KEY
 
 /**
+ * Optional Bitdrift ingest URL. Defaults to production if not provided.
+ */
+export const BITDRIFT_API_URL: string | undefined =
+  process.env.EXPO_PUBLIC_BITDRIFT_API_URL
+
+/**
+ * Force-enable Bitdrift even if Statsig gates are off.
+ */
+export const ENABLE_BITDRIFT: boolean =
+  process.env.EXPO_PUBLIC_ENABLE_BITDRIFT === 'true'
+
+/**
+ * Force-enable Bitdrift network instrumentation even if Statsig gate is off.
+ */
+export const ENABLE_BITDRIFT_NETWORKING: boolean =
+  process.env.EXPO_PUBLIC_ENABLE_BITDRIFT_NETWORKING === 'true'
+
+/**
  * GCP project ID which is required for native device attestation. On web, this
  * should be unset and evaluate to 0.
  */

@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler' // must be first
 import '#/platform/polyfills'
+import '#/logger/bitdrift/setup' // ensure Bitdrift init runs
 
 import {LogBox} from 'react-native'
 import {registerRootComponent} from 'expo'
