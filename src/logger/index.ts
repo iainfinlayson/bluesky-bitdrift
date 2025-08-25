@@ -52,6 +52,10 @@ export class Logger {
     for (const transport of TRANSPORTS) {
       logger.addTransport(transport)
     }
+    // ADD: also send logs to Bitdrift in development (was prod-only before)
+    if (ENV === 'development' && isNative) {
+      logger.addTransport(bitdriftTransport)
+    }
     return logger
   }
 
